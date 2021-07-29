@@ -28,7 +28,7 @@ mongoose.connect(`${process.env.MONGO_DB}${process.env.MONGOOSE_USER}:${process.
 app.use(express.json());
 app.use(cors({ origin: "https://oauth-boilerplate-frontend.herokuapp.com/", credentials: true }))
 
-// app.set("trust proxy", 1);
+app.set("trust proxy", 1);
 
 app.use(
   session({
