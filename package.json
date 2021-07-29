@@ -21,7 +21,8 @@
     "passport": "^0.4.1",
     "passport-github": "^1.1.0",
     "passport-google-oauth20": "^2.0.0",
-    "passport-twitter": "^1.0.4"
+    "passport-twitter": "^1.0.4",
+    "tsc": "^2.0.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.12",
