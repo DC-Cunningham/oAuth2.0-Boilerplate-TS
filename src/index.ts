@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import cors from 'cors';
 import session from 'express-session';
 import passport from 'passport';
-import User from './User';
+import User from './user';
 import { IMongoDBUser } from './types'
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const TwitterStrategy = require('passport-twitter').Strategy;
