@@ -26,7 +26,7 @@ mongoose.connect(`${process.env.MONGO_DB}${process.env.MONGOOSE_USER}:${process.
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: "https://localhost:3000", credentials: true }))
+app.use(cors({ origin: "https://oauth-boilerplate-frontend.herokuapp.com/", credentials: true }))
 
 // app.set("trust proxy", 1);
 
@@ -150,7 +150,7 @@ app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }))
 app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login', session: true }),
   function (req, res) {
-    res.redirect('http://localhost:3000');
+    res.redirect('https://oauth-boilerplate-frontend.herokuapp.com/');
   });
 
 
@@ -159,7 +159,7 @@ app.get('/auth/twitter', passport.authenticate('twitter'));
 app.get('/auth/twitter/callback',
   passport.authenticate('twitter', { failureRedirect: '/login', session: true }),
   function (req, res) {
-    res.redirect('http://localhost:3000');
+    res.redirect('https://oauth-boilerplate-frontend.herokuapp.com/');
   });
 
 
@@ -168,7 +168,7 @@ app.get('/auth/github', passport.authenticate('github'));
 app.get('/auth/github/callback',
   passport.authenticate('github', { failureRedirect: '/login', session: true }),
   function (req, res) {
-    res.redirect('http://localhost:3000');
+    res.redirect('https://oauth-boilerplate-frontend.herokuapp.com/');
   });
 
 
